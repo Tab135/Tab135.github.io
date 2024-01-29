@@ -40,8 +40,13 @@ li {
     margin-bottom: 10px;
 }
 
-footer {
-    background-color: #eee;
-    padding: 10px;
-    text-align: center;
+.cta-section {
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: grid;
+    place-items: center;
 }
+.cta-section h3 {
+    color: #4CAF50;
+}
+.center { margin: 0 auto; width: 400px; }
