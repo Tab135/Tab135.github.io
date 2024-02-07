@@ -1,29 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Interactive Gallery</title>
-<link rel="stylesheet" type="text/css" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Gallery</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-<div class="gallery">
-    <div class="gallery-item">
-        <img src="https://via.placeholder.com/300" alt="Image 1">
-        <div class="overlay">Image 1 Description</div>
+    <h1>My Gallery</h1>
+    <div class="gallery-container">
+        <img class="thumbnail" src="images/image1.jpg" alt="Image 1">
+        <img class="thumbnail" src="images/image2.jpg" alt="Image 2">
+        <img class="thumbnail" src="images/image3.jpg" alt="Image 3">
+        </div>
+    <div class="image-viewer">
+        <img class="main-image" src="images/image1.jpg" alt="Main Image">
+        <p class="image-description">Image 1 Description</p>
     </div>
-    <div class="gallery-item">
-        <img src="https://via.placeholder.com/300" alt="Image 2">
-        <div class="overlay">Image 2 Description</div>
-    </div>
-    <div class="gallery-item">
-        <img src="https://via.placeholder.com/300" alt="Image 3">
-        <div class="overlay">Image 3 Description</div>
-    </div>
-
-</div>
-
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
