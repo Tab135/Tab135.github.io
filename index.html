@@ -1,22 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interactive Gallery</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Gallery</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>My Gallery</h1>
-    <div class="gallery-container">
-        <img class="thumbnail" src="images/image1.jpg" alt="Image 1">
-        <img class="thumbnail" src="images/image2.jpg" alt="Image 2">
-        <img class="thumbnail" src="images/image3.jpg" alt="Image 3">
-        </div>
-    <div class="image-viewer">
-        <img class="main-image" src="images/image1.jpg" alt="Main Image">
-        <p class="image-description">Image 1 Description</p>
+  <h1>My Gallery</h1>
+  <div class="gallery">
+    <img src="images/image1.jpg" alt="Image 1" data-full="images/image1_full.jpg">
+    <img src="images/image2.jpg" alt="Image 2" data-full="images/image2_full.jpg">
+    <img src="images/image3.jpg" alt="Image 3" data-full="images/image3_full.jpg">
     </div>
-    <script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
