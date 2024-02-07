@@ -1,22 +1,20 @@
-const thumbnails = document.querySelectorAll('.thumbnail');
-const imageViewer = document.querySelector('.image-viewer');
-const mainImage = document.querySelector('.main-image');
-const imageDescription = document.querySelector('.image-description');
+const images = document.querySelectorAll('.gallery img');
 
-thumbnails.forEach(thumbnail => {
-    thumbnail.addEventListener('click', () => {
-        const source = thumbnail.src;
-        const alt = thumbnail.alt;
-        const description = alt + " description"; // Replace with actual descriptions
+images.forEach(image => {
+  image.addEventListener('click', () => {
+    const fullImage = document.createElement('img');
+    fullImage.src = image.dataset.full;
+    fullImage.style.position = 'fixed';
+    fullImage.style.top = 0;
+    fullImage.style.left = 0;
+    fullImage.style.width = '100%';
+    fullImage.style.height = '100%';
+    fullImage.style.zIndex = 999;
 
-        mainImage.src = source;
-        imageDescription.textContent = description;
-        imageViewer.style.display = "block";
+    document.body.appendChild(fullImage);
+
+    fullImage.addEventListener('click', () => {
+      fullImage.remove();
     });
-});
-
-window.addEventListener('click', (event) => {
-    if (event.target !== imageViewer) {
-        imageViewer.style.display = "none";
-    }
+  });
 });
