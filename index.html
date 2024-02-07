@@ -1,18 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Interactive Gallery</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>Hi, I'm Trieu!</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        window.onload = function() {
+            // JavaScript to change header background color on hover
+            var header = document.querySelector('header');
+            header.addEventListener('mouseover', function() {
+                this.style.backgroundColor = 'lightgray';
+            });
+            header.addEventListener('mouseout', function() {
+                this.style.backgroundColor = 'gray';
+            });
+
+            // JavaScript to toggle video visibility
+            var video = document.querySelector('.cta-section video');
+            var toggleButton = document.createElement('button');
+            toggleButton.textContent = 'Toggle Video';
+            toggleButton.onclick = function() {
+                if (video.style.display === 'none' || video.style.display === '') {
+                    video.style.display = 'block';
+                } else {
+                    video.style.display = 'none';
+                }
+            };
+            document.querySelector('.cta-section').appendChild(toggleButton);
+
+            // JavaScript for gallery
+            var myPhotosSection = document.querySelector('.my-photos');
+            var images = ['photo1.jpg', 'photo2.jpg', 'photo3.jpg']; // Add your photo URLs here
+            images.forEach(function(imageSrc) {
+                var img = document.createElement('img');
+                img.src = imageSrc;
+                img.onclick = function() {
+                    // Show image in full-screen when clicked
+                    var fullScreenImg = document.createElement('img');
+                    fullScreenImg.src = imageSrc;
+                    fullScreenImg.classList.add('full-screen-img');
+                    document.body.appendChild(fullScreenImg);
+                    fullScreenImg.onclick = function() {
+                        document.body.removeChild(fullScreenImg);
+                    };
+                };
+                myPhotosSection.appendChild(img);
+            });
+        };
+    </script>
 </head>
 <body>
-  <h1>My Gallery</h1>
-  <div class="gallery">
-    <img src="images/image1.jpg" alt="Image 1" data-full="images/image1_full.jpg">
-    <img src="images/image2.jpg" alt="Image 2" data-full="images/image2_full.jpg">
-    <img src="images/image3.jpg" alt="Image 3" data-full="images/image3_full.jpg">
+<header>
+    <h1>Hi, I'm Trieu!</h1>
+    <p>Some random guy you might find interesting</p>
+    <img src="avatar.png" alt="My avatar">
+</header>
+<main>
+    <h2>Who am I ?</h2>
+    <ul>
+        <li>My name is Trieu (AKA Tab135)</li>
+        <li>I'm just some random guy that you might find me lurking in the back of the class doing something suspicious.</li>
+        <li>also I'm studying to be a software engineer and maybe become a game developer.</li>
+    </ul>
+
+    <div class="cta-section">
+        <h3 align="center">Random project</h3>
+        <p align="center">I'm working on a thrilling game project using Godot 4.2. So stay tuned!</p>
+        <video class="center" controls loop muted autoplay>
+            <source src="gd.mp4" type="video/mp4"/>
+        </video>
     </div>
-  <script src="script.js"></script>
+
+    <div class="my-photos">
+        <h2>My Photos</h2>
+        <!-- Images will be dynamically added here -->
+    </div>
+</main>
 </body>
 </html>
