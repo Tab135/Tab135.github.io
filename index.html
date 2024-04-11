@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css"/>
+    <title>Hi there folk</title>
+    <head>
+        <nav>
+            <label >Tab135</label>
+            
+            <img src="avatar.png" alt="Logo" class="logo-img" onclick="myFunction()">
+            <ul>
+                <li>
+                    <a id="1" href="#">About</a>
+                    <a id="2" href="#">Project</a>
+                    <a id="3" href="#">Tools</a>
+                </li>
+            </ul>
+        </nav>
+    </head>
+    <body>
+        <div class="bodypara">
+            <h2 id="de">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus id dolore excepturi fugiat nulla quod aliquam, qui, minima consectetur reprehenderit maxime aperiam quibusdam provident facere neque repellendus beatae rerum ipsum!Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae, aperiam. Optio, ipsum! Nisi nihil illo cupiditate! Soluta asperiores repudiandae maiores dolorum ut eveniet laboriosam reiciendis omnis excepturi? Delectus, vero et?
+            </h2>
+        </div>
+    </body>
+    <body>
+        <style>
+            .dark{
+                background-image: url(https://i.gifer.com/WFBF.gif);
+                background-size: cover;
+                nav{
+                    background-color: red;
+                }
+                #de{
+                   color: red; 
+                }
+                
+            }
+        </style>
+    </body>
+</html>
+
+
+<script>
+    function myFunction() {
+        var element = document.body;
+        element.classList.toggle("dark");
+        document.getElementById("1").innerHTML = "Help";
+        document.getElementById("2").innerHTML = "Die";
+        document.getElementById("3").innerHTML = "Blood";
+        document.getElementById("de").innerHTML = "Yesterday, upon the stair. I met a man who wasn’t there. He wasn't there again today I wish. I wish he’d go away";
+    }
+</script>
